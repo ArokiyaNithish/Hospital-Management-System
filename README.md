@@ -130,4 +130,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-Project Link: [https://github.com/yourusername/hospital-management-system](https://github.com/yourusername/hospital-management-system)
+Project Link: [https://github.com/ArokiyaNithish/Hospital-Management-System](https://github.com/ArokiyaNithish/Hospital-Management-System)
