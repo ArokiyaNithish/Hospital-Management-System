@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}Doctor Dashboard - MediCare{% endblock %}
+
+{% block content %}
+<div class="dashboard-header">
+    <div>
+        <h1 style="color: var(--primary-color);">Hello, Dr. {{ user.last_name }}</h1>
+        <p>Manage your appointments and patients.</p>
+    </div>
+    <div>
+        <a href="#" class="btn btn-outline" style="margin-right: 1rem;">Update Availability</a>
+        <a href="#" class="btn btn-primary">Create Prescription</a>
+    </div>
+</div>
+
+<div class="grid">
+    <div class="stat-card glass-container card">
+        <div class="stat-value">{{ pending_appointments.count }}</div>
+        <div class="stat-label">Pending Req</div>
+    </div>
+    <div class="stat-card glass-container card">
+        <div class="stat-value">{{ upcoming_appointments.count }}</div>
+        <div class="stat-label">Upcoming</div>
+    </div>
+    <div class="stat-card glass-container card">
+        <div class="stat-value">{{ user.doctor_profile.consultation_fee }}</div>
+        <div class="stat-label">Consultation Fee</div>
+    </div>
+</div>
+
+<div class="grid" style="margin-top: 2rem; grid-template-columns: 2fr 1fr;">
+    <div class="glass-container card">
+        <h3 style="margin-bottom: 1rem; color: var(--secondary-color);">Upcoming Appointments</h3>
+        {% if upcoming_appointments %}
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="text-align: left; border-bottom: 1px solid #e2e8f0;">
+                    <th style="padding: 0.5rem;">Patient</th>
+                    <th style="padding: 0.5rem;">Date</th>
+                    <th style="padding: 0.5rem;">Time</th>
+                    <th style="padding: 0.5rem;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for apt in upcoming_appointments %}
+                <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 0.5rem;">{{ apt.patient.get_full_name|default:apt.patient.username }}</td>
+                    <td style="padding: 0.5rem;">{{ apt.date }}</td>
+                    <td style="padding: 0.5rem;">{{ apt.time_slot }}</td>
+                    <td style="padding: 0.5rem;">
+                        <a href="#" style="color: var(--primary-color);">View</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No confirmed appointments.</p>
+        {% endif %}
+    </div>
+
+    <div class="glass-container card">
+        <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Pending Requests</h3>
+        {% if pending_appointments %}
+        <ul style="list-style: none;">
+            {% for apt in pending_appointments %}
+            <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #f1f5f9;">
+                <strong>{{ apt.patient.get_full_name }}</strong><br>
+                <span style="font-size: 0.9rem; color: #64748b;">{{ apt.date }} at {{ apt.time_slot }}</span><br>
+                <div style="margin-top: 0.5rem;">
+                    <a href="#" class="btn"
+                        style="padding: 0.25rem 0.5rem; font-size: 0.8rem; background: #22c55e; color: white;">Accept</a>
+                    <a href="#" class="btn"
+                        style="padding: 0.25rem 0.5rem; font-size: 0.8rem; background: #ef4444; color: white;">Decline</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No pending requests.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

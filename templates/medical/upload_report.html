@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Upload Medical Report - MediCare{% endblock %}
+
+{% block content %}
+<div class="glass-container" style="max-width: 600px; margin: 2rem auto; padding: 2rem;">
+    <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Upload Medical Report</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Upload Report</button>
+    </form>
+</div>
+{% endblock %}

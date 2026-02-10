@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - MediCare{% endblock %}
+
+{% block content %}
+<div style="text-align: center; padding: 4rem 0;">
+    <h1 style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-color);">Your Health, Our Priority</h1>
+    <p
+        style="font-size: 1.25rem; color: #64748b; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Advanced hospital management system for seamless doctor-patient interaction.
+    </p>
+
+    {% if not user.is_authenticated %}
+    <div style="display: flex; justify-content: center; gap: 1rem;">
+        <a href="{% url 'register_patient' %}" class="btn btn-primary">Book Appointment</a>
+        <a href="{% url 'register_doctor' %}" class="btn btn-outline">Doctor Login</a>
+    </div>
+    {% else %}
+    <div style="display: flex; justify-content: center; gap: 1rem;">
+        {% if user.is_doctor %}
+        <a href="{% url 'doctor_dashboard' %}" class="btn btn-primary">Go to Dashboard</a>
+        {% else %}
+        <a href="{% url 'patient_dashboard' %}" class="btn btn-primary">Go to Dashboard</a>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="grid" style="margin-top: 4rem; text-align: left;">
+        <div class="card glass-container">
+            <i class="fas fa-calendar-check"
+                style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+            <h3>Easy Booking</h3>
+            <p>Schedule appointments with top specialists in just a few clicks.</p>
+        </div>
+        <div class="card glass-container">
+            <i class="fas fa-file-medical"
+                style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+            <h3>Medical Records</h3>
+            <p>Access your medical history and reports anytime, anywhere.</p>
+        </div>
+        <div class="card glass-container">
+            <i class="fas fa-comment-medical"
+                style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+            <h3>Daily Tracking</h3>
+            <p>Monitor your health daily and get personalized insights.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

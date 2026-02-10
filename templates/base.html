@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hospital Management System{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar glass-container">
+        <a href="{% url 'home' %}" class="logo">
+            <i class="fas fa-heartbeat"></i>
+            MediCare
+        </a>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            {% if user.is_authenticated %}
+                {% if user.is_doctor %}
+                    <li><a href="{% url 'doctor_dashboard' %}">Dashboard</a></li>
+                {% elif user.is_patient %}
+                    <li><a href="{% url 'patient_dashboard' %}">Dashboard</a></li>
+                {% endif %}
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <div class="container" style="padding: 0 5%; padding-bottom: 2rem;">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="glass-container" style="padding: 1rem; margin-bottom: 1rem; color: var(--text-color); border-left: 4px solid var(--primary-color);">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer style="text-align: center; padding: 2rem; color: #64748b;">
+        <p>&copy; 2024 MediCare Hospital Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

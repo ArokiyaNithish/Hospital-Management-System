@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Patient Registration - MediCare{% endblock %}
+
+{% block content %}
+<div class="glass-container" style="max-width: 600px; margin: 2rem auto; padding: 2rem;">
+    <h2 style="text-align: center; margin-bottom: 2rem; color: var(--secondary-color);">Patient Registration</h2>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Simple form rendering for speed, can be customized -->
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Sign Up</button>
+    </form>
+    <p style="text-align: center; margin-top: 1rem;">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</div>
+{% endblock %}
