@@ -1,4 +1,4 @@
-# Hospital Management System
+# Doctor & Patient Management System
 
 A full-stack web application built with Django (Python) and MySQL, designed to manage hospital operations efficiently. It features separate dashboards for Doctors and Patients, appointment booking, medical report management, and daily health tracking.
 
@@ -107,11 +107,9 @@ Before you begin, ensure you have met the following requirements:
 
 ## 📸 Screenshots
 
-![Demo Image](images/image1.png)
-![Demo Image](images/image2.png)
-![Demo Image](images/image3.png)
-![Demo Image](images/image4.png)
+*(Add screenshots of your application here)*
 
+---
 
 ## 🤝 Contributing
 
