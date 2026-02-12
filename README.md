@@ -1,4 +1,4 @@
-# Doctor & Patient Management System
+# Hospital Management System
 
 A full-stack web application built with Django (Python) and MySQL, designed to manage hospital operations efficiently. It features separate dashboards for Doctors and Patients, appointment booking, medical report management, and daily health tracking.
 
@@ -131,3 +131,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## 📞 Contact
 
 Project Link: [https://github.com/ArokiyaNithish/Hospital-Management-System](https://github.com/ArokiyaNithish/Hospital-Management-System)
+
