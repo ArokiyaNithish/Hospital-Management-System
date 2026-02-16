@@ -425,16 +425,16 @@ User (Custom)
 > **Note**: Add screenshots of your application here to showcase the UI
 
 ### Homepage
-![Homepage](screenshots/hom
+![Homepage](https://github.com/ArokiyaNithish/Hospital-Management-System/blob/main/images/image1.png)
 
 ### Patient Dashboard
-![Patient Dashboard](screenshots/patient-dashboard.png)
+![Patient Dashboard](https://github.com/ArokiyaNithish/Hospital-Management-System/blob/main/images/image2.png)
 
 ### Doctor Dashboard
-![Doctor Dashboard](screenshots/doctor-dashboard.png)
+![Doctor Dashboard](https://github.com/ArokiyaNithish/Hospital-Management-System/blob/main/images/image3.png)
 
 ### Appointment Booking
-![Appointment Booking](screenshots/appointment-booking.png)
+![Appointment Booking](https://github.com/ArokiyaNithish/Hospital-Management-System/blob/main/images/image4.png)
 
 ## 🔒 Security Features
 
@@ -482,10 +482,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Arokiya Nithish**
+**Arokiya Nithish J**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- GitHub: [@ArokiyaNithish](https://github.com/ArokiyaNithish)
+- LinkedIn: [Arokiya Nithish J](https://linkedin.com/in/arokiyanithishj)
 
 ## 🙏 Acknowledgments
 
@@ -496,8 +496,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email your.email@example.com or create an issue in the GitHub repository.
+For support, email @arokiyanithishj@gmail.com or create an issue in the GitHub repository.
 
 ---
 
 **⭐ If you find this project useful, please consider giving it a star!**
+
