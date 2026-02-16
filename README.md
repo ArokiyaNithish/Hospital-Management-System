@@ -485,8 +485,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Arokiya Nithish J**
 
 - GitHub: [@ArokiyaNithish](https://github.com/ArokiyaNithish)
-- LinkedIn: [Arokiya Nithish J](https://linkedin.com/in/arokiyanithishj)
-
+- LinkedIn: [@Arokiya Nithish J](https://www.linkedin.com/in/arokiya-nithishj/)
+- Email ID : [arokiyanithishj@gmail.com]
+- My Portfoilio [Arokiya Nithish](arokiyanithish.github.io/portfolio/)
+- 
+  
 ## 🙏 Acknowledgments
 
 - Django Documentation
@@ -501,4 +504,5 @@ For support, email @arokiyanithishj@gmail.com or create an issue in the GitHub r
 ---
 
 **⭐ If you find this project useful, please consider giving it a star!**
+
 
