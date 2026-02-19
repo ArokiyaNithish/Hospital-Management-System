@@ -488,7 +488,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - LinkedIn: [@Arokiya Nithish J](https://www.linkedin.com/in/arokiya-nithishj/)
 - Email ID : [arokiyanithishj@gmail.com]
 - My Portfoilio [Arokiya Nithish](arokiyanithish.github.io/portfolio/)
-- 
   
 ## 🙏 Acknowledgments
 
@@ -504,5 +503,6 @@ For support, email @arokiyanithishj@gmail.com or create an issue in the GitHub r
 ---
 
 **⭐ If you find this project useful, please consider giving it a star!**
+
 
 
